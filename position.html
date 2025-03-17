@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션</title>
+    
+    <style>
+        /* z-index는 레이어 순서와 같이 순서가 큰 순서대로 우선 노출, 최대 숫자는 999 */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .con{
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        .l-box{
+            width: 300px;
+            height: 300px;
+        }
+        .s-box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .red{
+            background-color: red;
+            position: relative;
+
+        }
+        .blue{
+            background-color: blue;
+            position: relative;
+            top: -150px;
+            left: 150px;
+        }
+        .purple{
+            background-color: purple;
+            position: relative;
+            top: -300px;
+            left: 300px;
+        }
+        .yellow-1{
+            position: absolute;
+            left: 200px;
+        }
+        .yellow-2{
+            position: absolute;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="l-box red">
+            <div class="s-box yellow-1"></div>
+            <div class="s-box yellow-2"></div>
+        </div>
+        <div class="l-box blue">
+            <div class="s-box yellow-1"></div>
+            <div class="s-box yellow-2"></div>
+        </div>
+        <div class="l-box purple">
+            <div class="s-box yellow-1"></div>
+            <div class="s-box yellow-2"></div>
+        </div>
+    </div>
+</body>
+</html>
